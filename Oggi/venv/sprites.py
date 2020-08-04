@@ -33,7 +33,7 @@ class Cockroach(sprite.Sprite):
 
         if self.coords_x >= 870 or self.coords_x <= 30:
             self.dx *= -1
-        # ---------------Почти хаотичное движение тараканов, на сложности 2 -------------------
+        """ ---------------Почти хаотичное движение тараканов, на сложности 2 ----------------"""
         if self.difficulty == 2:
             if 200 > self.coords_y > 180:
                 if 600 > self.coords_x >100:
@@ -66,7 +66,7 @@ class Cockroach(sprite.Sprite):
             if 700 > self.coords_x > 690:
                 if 600 > self.coords_y >100:
                     self.coords_y = self.coords_y + randint(1, 5)
-        # -----------------------------------------------------------------------
+        """ ----------------------------------------------------------------- """
 
     def draw(self, screen: "background", roach_sprites):
         self.image = image.load('./Lib/roach' + str(roach_sprites) + '.png').convert_alpha()
